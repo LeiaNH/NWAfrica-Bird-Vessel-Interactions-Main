@@ -1,10 +1,8 @@
 # NWAfrica-Bird-Vessel-Interactions-Main
 
-This repository includes the data and R scripts used to reproduce the Boosted Regression Tree (BRT) models and main figures from the study "Seabird–vessel interactions in industrial fisheries of Northwest Africa: implications for international bycatch management" (Navarro-Herrero et al., 2025). In this study, we combined high-resolution seabird tracking data with information on industrial fishing and non-fishing vessels to study how nine seabird species interact with fisheries in Northwest African waters.
+This repository includes the data and R scripts used to reproduce the Boosted Regression Tree (BRT) models and main figures from the study "Seabird–vessel interactions in industrial fisheries of Northwest Africa: implications for international bycatch management" (Navarro-Herrero et al., 2025). In this study, we combined high-resolution seabird tracking data with AIS vessel tracking data from industrial fishing and non-fishing vessels to investigate how nine seabird species interact with fisheries in Northwest African waters.
 
-The scripts here focus on modeling interactions for three key seabird species. The dataset already includes seabird–vessel interactions (both encounters and attendances), along with all the covariates needed for the models and figures. 
-
-To run the full modeling workflow—including data exploration, model tuning, fitting, and bootstrap resampling—use the mainBRT.R script. The results (plots, tables, and summaries) will be saved in the /output/ folder. To create the main figures shown in the paper, run the mainFigures.R script after the modeling is complete.
+The scripts provided here focus on modelling interactions for three seabird species that frequently attend fishing vessels. The dataset includes seabird–vessel interactions (both encounters and attendances), along with all the covariates required for the models and figures.
 
 ### Sample datasets
 
@@ -17,12 +15,15 @@ CALEDW_inputBRT_L1.rds  | This dataset records seabird-vessel interactions (enco
 LARAUD_inputBRT_L1.rds  | This dataset records seabird-vessel interactions (encounters/attendances) of Audoui'ns gull used for BRT and derived figures.  
 events.rds              | This dataset records seabird–vessel interactions (encounter/attendance) used for figure 3 and 6.
 
-Each BRT input dataset includes environmental (e.g. SST, CHL), spatial (e.g. depth, distance to coast), and anthropogenic (e.g. vessel density, gear type) covariates, along with a binary response indicating seabird presence or pseudo-absence.
 
 `Data` folder (with the input folder and the output folder derived from this repository), can be downloaded using the following link:
 https://www.dropbox.com/scl/fo/m6eg8s774jxio9rz4nphr/AHCzUjrWhnwa9jPkIZ1ENI4?rlkey=wmfme00bic3r4vlvj4c27r8nh&dl=1
 
 ### Code
+
+To run the full modeling workflow—including data exploration, model tuning, fitting, and bootstrap resampling—use the mainBRT.R script. The required input file is *_inputBRT_L1.rds. Each BRT input dataset includes environmental (e.g., SST, CHL), spatial (e.g., depth, distance to coast), and vessel(e.g., vessel density, gear type) covariates, along with a binary response indicating attendance (response 1) or encounter (response 0). The results (plots, tables, and summaries) will be saved in the /output/ folder. 
+
+To generate the main figures shown in the paper, run the mainFigures.R script after the modeling is complete. This script depends on the output from mainBRT.R, and also uses events.rds to produce Figures 3 and 6.
 
 The scripts are located in the `code` folder. The workflow can be easily followed by running the four main scripts listed below, each of which connects to additional scripts as needed:
 
