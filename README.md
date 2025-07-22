@@ -1,5 +1,7 @@
 # NWAfrica-Bird-Vessel-Interactions-Main
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.16322470.svg)](https://doi.org/10.5281/zenodo.16322470)
+
 This repository includes the data and R scripts used to reproduce the Boosted Regression Tree (BRT) models and main figures from the study "Seabird–vessel interactions in industrial fisheries of Northwest Africa: implications for international bycatch management" (Navarro-Herrero et al., 2025). In this study, we combined high-resolution seabird tracking data with AIS vessel tracking data from industrial fishing and non-fishing vessels to investigate how nine seabird species interact with fisheries in Northwest African waters.
 
 The scripts provided here focus on modelling interactions for three seabird species that frequently attend fishing vessels. The dataset includes seabird–vessel interactions (both encounters and attendances), along with all the covariates required for the models and figures.
