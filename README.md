@@ -21,9 +21,11 @@ https://www.dropbox.com/scl/fo/m6eg8s774jxio9rz4nphr/AHCzUjrWhnwa9jPkIZ1ENI4?rlk
 
 ### Code
 
-To run the full modeling workflow—including data exploration, model tuning, fitting, and bootstrap resampling—use the mainBRT.R script. The required input file is *_inputBRT_L1.rds. Each BRT input dataset includes environmental (e.g., SST, CHL), spatial (e.g., depth, distance to coast), and vessel(e.g., vessel density, gear type) covariates, along with a binary response indicating attendance (response 1) or encounter (response 0). The results (plots, tables, and summaries) will be saved in the /output/ folder. 
+To run the full modeling workflow—including data exploration, model tuning, fitting, and bootstrap resampling—use the mainBRT.R script. The required input file is *_inputBRT_L1.rds. Each BRT input dataset includes environmental (e.g., SST, CHL), spatial (e.g., depth, distance to coast), and vessel(e.g., vessel density, gear type) covariates, along with a binary response indicating attendance (response 1) or encounter (response 0). 
 
 To generate the main figures shown in the paper, run the mainFigures.R script after the modeling is complete. This script depends on the output from mainBRT.R, and also uses events.rds to produce Figures 3 and 6.
+
+The results (plots, tables, and summaries) will be saved in the /output/ folder. 
 
 The scripts are located in the `code` folder. The workflow can be easily followed by running the four main scripts listed below, each of which connects to additional scripts as needed:
 
