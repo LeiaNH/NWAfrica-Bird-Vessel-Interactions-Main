@@ -38,7 +38,7 @@ Below is the recommended order for running the main scripts:
 
 2. Run `mainBRT.R` to train the models and test on a shared testing dataset, and generate relevant figures.
 
-5. Run `mainFigures.R` o produce the main figures shown in the paper (Figures 3–6).
+5. Run `mainFigures.R` to produce the main figures shown in the paper (Figures 3–6).
 
 
 
